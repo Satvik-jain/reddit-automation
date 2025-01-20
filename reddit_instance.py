@@ -16,7 +16,11 @@ reddit = praw.Reddit(
     username="Narrow_Block_8755",
 )
 
-print(reddit.read_only)
+# print(reddit.read_only)
 
+from llm_groq import CallGroq
+
+subreddit = reddit.subreddit("u_Narrow_Block_8755")
+subreddit.submit(title="AI Generated Content", selftext=CallGroq())
 # reddit.read_only = True
 
